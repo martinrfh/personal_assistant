@@ -28,11 +28,11 @@ def get_weather(target_time="today"):
 
         day = data["forecast"]["forecastday"][index]["day"]
         return {
-            "weather_condition": day.get("condition", {}).get("text", "Unknown"),
-            "average_temperature": day.get("avgtemp_c", 0.0),
-            "maximum_temperature": day.get("maxtemp_c", 0.0),
-            "minimum_temperature": day.get("mintemp_c", 0.0),
-            "chance_of_rain_percent": day.get("daily_chance_of_rain", 0)
+            "weather condition": day.get("condition", {}).get("text", "Unknown"),
+            "average temperature": day.get("avgtemp_c", 0.0),
+            "maximum temperature": day.get("maxtemp_c", 0.0),
+            "minimum temperature": day.get("mintemp_c", 0.0),
+            "chance of rain percent": day.get("daily_chance_of_rain", 0)
         }
 
     except requests.RequestException as e:
